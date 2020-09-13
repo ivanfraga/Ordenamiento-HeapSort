@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "HeapSort.h"
 using namespace std;
 void heapSort (int b[],int n);
 int main() {
@@ -34,27 +35,4 @@ cout <<"El orden es:";
 return 0;
 
 }
-void heapSort(int b[], int n)
-{
-  
-   int valor,temp,a;
 
-    for(int i=n; i>0; i--)
-    {
-        for(int j=1; j<=i; j++)
-        {
-            valor=b[j];
-            a=j/2;
-            while(a>0 && b[a]<valor)
-            {
-                b[j]=b[a];
-                j=a;
-                a=a/2;
-            }
-            b[j]=valor;
-        }
-        temp=b[1];
-        b[1]=b[i];
-        b[i]=temp;
-    }
-}
